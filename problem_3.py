@@ -11,21 +11,20 @@
 def main():
     """Main method"""
     n = 600851475143
-    sqrt_n = int(n**0.5) + 1
+    sqrt_n = n**0.5
 
     # Calculate prime numbers below the square root of n
-    primes = list()
-    for i in range(2, sqrt_n):
+    primes = tuple()
+    for i in range(2, int(sqrt_n)):
         is_prime = True
         for prime in primes:
             if i % prime == 0:
                 is_prime = False
                 break
         if is_prime:
-            primes.append(i)
-            print(i)
+            primes += (i,)
 
-    # Extract the largest factor of n
+    # Extract the largest prime factor of n
     for j in range(len(primes)):
         if n % primes[-j] == 0:
             print(primes[-j])
