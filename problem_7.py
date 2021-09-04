@@ -8,6 +8,7 @@
 # Solution: 104743; Runtime: O(N^2)
 
 def main():
+    """Main method"""
     n = 10001
     primes = tuple()
 

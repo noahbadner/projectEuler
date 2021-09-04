@@ -15,6 +15,7 @@
 # Solution: 25164150; Runtime: O(N)
 
 def main():
+    """Main method"""
     n = 100
     natural_numbers = [i for i in range(1, n+1)]
 
