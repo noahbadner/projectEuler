@@ -1,4 +1,4 @@
 # projectEuler
 My coding solutions to the problems on projecteuler.net
 
-Top 37.116% of site users
+Top 31.538% of site users
