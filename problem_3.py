@@ -25,12 +25,11 @@ def main():
             primes.append(i)
             print(i)
 
-    # Extract factors of n
-    prime_factors = list()
-    for prime in primes:
-        if n % prime == 0:
-            prime_factors.append(prime)
-    print(prime_factors[-1])
+    # Extract the largest factor of n
+    for j in range(len(primes)):
+        if n % primes[-j] == 0:
+            print(primes[-j])
+            break
 
 
 if __name__ == "__main__":
