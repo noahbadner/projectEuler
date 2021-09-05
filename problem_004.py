@@ -17,15 +17,20 @@ def is_palindrome(n):
     return True
 
 
-def main():
-    """Main method"""
+def largest_product_palindrome(n):
+    """Returns the largest palindrome given an upper bound for its factors"""
     largest_palindrome = 0
-    for i in range(1, 1000):
-        for j in range(1, 1000):
+    for i in range(1, n):
+        for j in range(1, n):
             product = i * j
             if product > largest_palindrome and is_palindrome(product):
                 largest_palindrome = product
-    print(largest_palindrome)
+    return largest_palindrome
+
+
+def main():
+    """Main method"""
+    print(largest_product_palindrome(1000))
 
 
 if __name__ == "__main__":

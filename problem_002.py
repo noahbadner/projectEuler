@@ -9,17 +9,22 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the
 # even-valued terms.
-# Solution: 4613732l; Runtime: O(N)
+# Solution: 4613732; Runtime: O(N)
+
+def even_fibonacci_sum(n):
+    """Returns the sum of all even numbers in the Fibonacci sequence below the given upper bound n"""
+    even_fib_sum = 0
+    term_1, term_2 = 1, 2
+    while term_2 <= n:
+        if term_2 % 2 == 0:
+            even_fib_sum += term_2
+        term_1, term_2 = term_2, term_1 + term_2
+    return even_fib_sum
+
 
 def main():
     """Main method"""
-    fib_sum = 0
-    term_1, term_2 = 1, 2
-    while term_2 <= 4000000:
-        if term_2 % 2 == 0:
-            fib_sum += term_2
-        term_1, term_2 = term_2, term_1 + term_2
-    print(fib_sum)
+    print(even_fibonacci_sum(4000000))
 
 
 if __name__ == "__main__":
