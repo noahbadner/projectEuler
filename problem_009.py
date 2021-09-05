@@ -12,16 +12,18 @@
 # Find the product abc.
 # Solution: 31875000; Runtime: O(N*log(N))
 
-def main():
-    """Main method"""
-    n = 1000
-
+def pythagorean_triplet_product(n):
+    """Returns the product of all numbers in a pythagorean triplet that together have a given sum n"""
     for a in range(1, n):
         for b in range(1, n-a):
             c = (n - a - b)
             if a**2 + b**2 == c**2:
-                print(f"{a=}, {b=}, {c=}, {a*b*c}")
-                return 0
+                return a*b*c
+
+
+def main():
+    """Main method"""
+    print(pythagorean_triplet_product(1000))
 
 
 if __name__ == "__main__":
