@@ -23,12 +23,12 @@ def int_to_written_number(n):
     if n >= 1000:
         thousands_place = n // 1000
         return int_to_written_number(thousands_place) + " thousand" + \
-               (f" {int_to_written_number(n-(thousands_place*1000))}" if n-(thousands_place*1000) != 0 else "")
+            (f" {int_to_written_number(n-(thousands_place*1000))}" if n-(thousands_place*1000) != 0 else "")
     # Hundreds
     if n >= 100:
         hundreds_place = n // 100
         return int_to_written_number(hundreds_place) + " hundred" + \
-               (f" and {int_to_written_number(n-(hundreds_place*100))}" if n-(hundreds_place*100) != 0 else "")
+            (f" and {int_to_written_number(n-(hundreds_place*100))}" if n-(hundreds_place*100) != 0 else "")
     # Below 100
     if n < 21:
         return INT_TO_STRING_DICT[n]
