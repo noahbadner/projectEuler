@@ -1,3 +1,5 @@
+# Noah Badner, 2021
+#
 # Number letter counts
 # Problem 17
 #
