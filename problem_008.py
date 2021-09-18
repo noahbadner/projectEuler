@@ -30,6 +30,9 @@
 # What is the value of this product?
 # Solution: 23514624000; Runtime: O(N)
 
+RESOURCE_FILE_PATH = "resources/problem_008_number.txt"
+
+
 def largest_product_in_series(n, series):
     """
     Returns the largest product of n continuous integers in a series of integers
@@ -52,7 +55,7 @@ def main():
     n = 13
 
     # import number series from resource file
-    with open("resources/problem_008_number.txt", 'r') as number_file:
+    with open(RESOURCE_FILE_PATH, 'r') as number_file:
         number_series = number_file.read()
         number_file.close()
 

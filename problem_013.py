@@ -7,6 +7,9 @@
 #   [Attached in resource file]
 # Solution: 5537376230; Runtime: O(N)
 
+RESOURCE_FILE_PATH = "resources/problem_013_numbers.txt"
+
+
 def parse_file(file_path):
     """Parses the resource file and returns the given list of 50-digit numbers"""
     with open(file_path, 'r') as file:
@@ -17,7 +20,7 @@ def parse_file(file_path):
 
 def main():
     """Main method"""
-    print(str(sum(parse_file("resources/problem_013_numbers.txt")))[:10])
+    print(str(sum(parse_file(RESOURCE_FILE_PATH)))[:10])
 
 
 if __name__ == "__main__":

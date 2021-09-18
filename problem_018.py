@@ -21,6 +21,9 @@
 # clever method! ;o)
 # Solution: 1074; Runtime: O(Nlog(N))
 
+RESOURCE_FILE_PATH = "resources/problem_018_triangle.txt"
+
+
 def parse_file(file_path):
     """Parses the input file and return a triangle as a list of rows, each a list of the integers that make them up"""
     ret_list = list()
@@ -44,7 +47,7 @@ def max_path_sum(triangle):
 
 def main():
     """Main method"""
-    print(max_path_sum(parse_file("resources/problem_018_triangle.txt")))
+    print(max_path_sum(parse_file(RESOURCE_FILE_PATH)))
 
 
 if __name__ == "__main__":
